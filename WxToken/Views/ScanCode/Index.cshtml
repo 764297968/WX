@@ -13,14 +13,14 @@
 
 </head>
 <body>
-     <input type="button" onclick="ScanCode()" />
+     <input type="button" onclick="ScanCode()" value="扫码" style="width:200px;height:200px" />
 </body>
 </html>
 <script>
     var reg = new RegExp("&quot;", "g");
 
     wx.config({
-        debug: true,
+        debug: false,
         appId: "@Model.appId",
         timestamp: "@Model.timestamp",
         nonceStr: "@Model.nonceStr",

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Security;
 
 namespace WxToken.Common
 {
@@ -37,6 +38,28 @@ namespace WxToken.Common
             reader.Close();
             stream.Close();
             return result;
+        }
+        /// <summary>
+        /// 生成时间戳
+        /// </summary>
+        /// <returns></returns>
+        public static string Timestamp()
+        {
+            TimeSpan ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, 0);
+            return Convert.ToInt64(ts.TotalSeconds).ToString();
+        }
+        /// <summary>
+        /// 生成随机字符
+        /// </summary>
+        /// <returns></returns>
+        public static string GenerateNonceStr()
+        {
+            return Guid.NewGuid().ToString().Replace("-", "");
+        }
+        public static string SHA1(string str)
+        {
+            return  FormsAuthentication.HashPasswordForStoringInConfigFile(str, "SHA1");
+
         }
     }
 }

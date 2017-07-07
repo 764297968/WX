@@ -16,13 +16,11 @@ namespace WxToken.Common
         /// <returns></returns>
         public  static string GetWXAccessToken(string appid, string secret)
         {
-            System.Web.Caching.Cache cache = HttpRuntime.Cache;
-           
             string result = "";
             string access_token = "";
             try
             {
-                if (cache.Get(appid) == null)
+                if (CacheHelper.Get(appid) == null)
                 {
                     System.Net.HttpWebRequest xhr = (HttpWebRequest)HttpWebRequest.Create(string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", appid, secret).ToString());
                     System.IO.Stream stream = xhr.GetResponse().GetResponseStream();
@@ -33,12 +31,12 @@ namespace WxToken.Common
                     Newtonsoft.Json.Linq.JObject remark = Newtonsoft.Json.Linq.JObject.Parse(result);
 
                     access_token = remark.GetValue("access_token").ToString();
-                    cache.Insert(appid, access_token);//, TimeSpan.FromSeconds(7000)
+                    CacheHelper.Add(appid, access_token, TimeSpan.FromSeconds(7000));
                     return access_token;
                 }
                 else
                 {
-                    return cache.Get(appid).ToString();
+                    return CacheHelper.Get(appid).ToString();
                 }
 
             }
@@ -50,6 +48,11 @@ namespace WxToken.Common
             }
 
         }
+        /// <summary>
+        /// 获取jsapiticket
+        /// </summary>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
         public static string GetWXJsapi_Ticket(string accessToken)
         {
             string result = "";
@@ -58,7 +61,7 @@ namespace WxToken.Common
             {
                 if (CacheHelper.Get(accessToken) == null)
                 {
-                    System.Net.HttpWebRequest xhr = (HttpWebRequest)HttpWebRequest.Create(string.Format(WxUrl.Jsapi_TicketUrl, appid, secret).ToString());
+                    System.Net.HttpWebRequest xhr = (HttpWebRequest)HttpWebRequest.Create(string.Format(WxUrl.Jsapi_TicketUrl, accessToken).ToString());
                     System.IO.Stream stream = xhr.GetResponse().GetResponseStream();
                     System.IO.StreamReader reader = new System.IO.StreamReader(stream);
                     result = reader.ReadToEnd();

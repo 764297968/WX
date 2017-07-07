@@ -15,7 +15,7 @@ namespace WxToken.Common
         }
         public static void Add(string key,object value, TimeSpan cacheDuration)
         {
-           cache.Add(key, value, null, DateTime.Now.Add(cacheDuration), cacheDuration, CacheItemPriority.NotRemovable, null);
+           cache.Add(key, value, null, DateTime.MaxValue, cacheDuration, CacheItemPriority.NotRemovable, null);
         }
         public static object Get(string key)
         {

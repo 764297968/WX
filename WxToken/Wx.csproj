@@ -99,15 +99,20 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Common\CacheHelper.cs" />
+    <Compile Include="Common\LogHelper.cs" />
     <Compile Include="Common\OperateHelper.cs" />
+    <Compile Include="Common\TuLing.cs" />
+    <Compile Include="Common\WeiXinXML.cs" />
     <Compile Include="Common\WxHelper.cs" />
     <Compile Include="Common\WxUrl.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\ScanCodeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\WxConfig.cs" />
     <Compile Include="Models\WxModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,6 +131,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Menu\" />
+    <Folder Include="Views\Message\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
