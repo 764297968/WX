@@ -11,5 +11,12 @@ namespace WxToken.Common
         {
             get { return "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token={0}&type=jsapi"; }
         }
+        public static string ShowQrCodeUrl
+        {
+            get
+            {
+                return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket={0}";
+            }
+        }
     }
 }

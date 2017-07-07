@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Xml;
 using WxToken.Common;
+using WxToken.Models;
+using static WxToken.Models.EnumEntity;
 
 namespace WxToken.Controllers
 {
@@ -42,9 +44,30 @@ namespace WxToken.Controllers
                 case "event":
                     switch (WeiXinXML.GetFromXML(xmlDoc, "Event"))
                     {
+                        case "SCAN"://扫码
+                            string msg = "你居然是扫码进来的居然";
+                            switch (WeiXinXML.GetFromXML(xmlDoc, "EventKey"))
+                            {
+                                case "1": //普通码
+                                    msg += "是普通码!!";
+                                    break;
+                                case "2": //商品码
+                                    msg += "是商品码!!";
+                                    break;
+                                case "11": //正常码
+                                    msg += "是正常码！！";
+                                    break;
+                                default:
+                                    msg += "这码我也不知道";
+                                    break;
+                            }
+                            result = WeiXinXML.CreateTextMsg(xmlDoc, msg);
+                            break;
                         case "subscribe": //订阅
+                            result = WeiXinXML.CreateTextMsg(xmlDoc, "欢迎关注我们");
                             break;
                         case "unsubscribe": //取消订阅
+                            result = WeiXinXML.CreateTextMsg(xmlDoc, "你居然取消关注我们了");
                             break;
                         case "CLICK":
                             //DataTable dtMenuMsg = MenuMsgDal.GetMenuMsg(WXMsgUtil.GetFromXML(xmlDoc, "EventKey"));
@@ -128,6 +151,15 @@ namespace WxToken.Controllers
             return result;
             //   }
         }
-
+        public ActionResult CreateQrCode(int scene_id)
+        {
+            string access_token = WxHelper.GetWXAccessToken(WxConfig.AppId, WxConfig.Secret);
+            var qrCode = OperateHelper.CreateWxQRCode(access_token, null, ((QRCodeType)(2)).ToString(), "暂无",scene_id);
+            //return Json(qrCode,JsonRequestBehavior.AllowGet);
+            //return Content(string.Format(WxUrl.ShowQrCodeUrl, qrCode.ticket));
+            string fileName =  "/" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".jpg";
+            new System.Net.WebClient().DownloadFile(string.Format(WxUrl.ShowQrCodeUrl, qrCode.ticket), Server.MapPath("~/Qrcode") + fileName);
+            return View("/QrCode"+fileName as object);
+        }
     }
 }

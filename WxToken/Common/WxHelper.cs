@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web;
+using WxToken.Models;
 
 namespace WxToken.Common
 {
@@ -56,10 +57,11 @@ namespace WxToken.Common
         public static string GetWXJsapi_Ticket(string accessToken)
         {
             string result = "";
-            string access_token = "";
+            string ticket = "";
             try
             {
-                if (CacheHelper.Get(accessToken) == null)
+                string key = WxConfig.AppId + "ticket";
+                if (CacheHelper.Get(key) == null)
                 {
                     System.Net.HttpWebRequest xhr = (HttpWebRequest)HttpWebRequest.Create(string.Format(WxUrl.Jsapi_TicketUrl, accessToken).ToString());
                     System.IO.Stream stream = xhr.GetResponse().GetResponseStream();
@@ -69,13 +71,13 @@ namespace WxToken.Common
                     stream.Close();
                     Newtonsoft.Json.Linq.JObject remark = Newtonsoft.Json.Linq.JObject.Parse(result);
 
-                    access_token = remark.GetValue("access_token").ToString();
-                    CacheHelper.Add(accessToken, access_token, TimeSpan.FromSeconds(7000));  
-                    return access_token;
+                    ticket = remark.GetValue("ticket").ToString();
+                    CacheHelper.Add(key, ticket, TimeSpan.FromSeconds(7000));  
+                    return ticket;
                 }
                 else
                 {
-                    return CacheHelper.Get(accessToken).ToString();
+                    return CacheHelper.Get(key).ToString();
                 }
 
             }

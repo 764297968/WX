@@ -112,14 +112,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\EnumEntity.cs" />
     <Compile Include="Models\WxConfig.cs" />
     <Compile Include="Models\WxModel.cs" />
+    <Compile Include="Models\WxQrCodeInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\ScanCode\Index.cshtml" />
+    <Content Include="Views\Home\CreateQrCode.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,7 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="Qrcode\" />
     <Folder Include="Views\Menu\" />
     <Folder Include="Views\Message\" />
   </ItemGroup>

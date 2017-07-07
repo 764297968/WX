@@ -16,23 +16,31 @@ namespace WxToken.Controllers
         public ActionResult Index()
         {
 
-            string accesstoken=WxHelper.GetWXAccessToken(WxConfig.AppId, WxConfig.Secret);
-            if(accesstoken!="err")
+            string accessToken = WxHelper.GetWXAccessToken(WxConfig.AppId, WxConfig.Secret);
+            if(accessToken != "err")
             {
-                string jsapi = "kgt8ON7yVITDhtdwci0qefm28dEjHL9zp4vUDrJ-ZMGCqZkoeXHz_M2BtKuwCKVLthE9vH5Hn6dc9Ju89FleiA";
-                string noncestr =OperateHelper. GenerateNonceStr();
-                string timestamp = OperateHelper.Timestamp();
-                string url = Request.Url.AbsoluteUri.ToString();
-                string str = string.Format("jsapi_ticket={0}&noncestr={1}&timestamp={2}&url={3}", jsapi, noncestr, timestamp, url);
-                string sign = OperateHelper.SHA1(str).ToLower();
-                WxModel wx = new WxModel()
+                string jsapi = WxHelper.GetWXJsapi_Ticket(accessToken);
+                if(jsapi!="err")
                 {
-                    appId = WxConfig.AppId,
-                    nonceStr = noncestr,
-                    timestamp = timestamp,
-                    signature = sign,
-                };
-                return View(wx);
+                    LogHelper.WriteFile(Server.MapPath("~/Logs/jsapi.txt"), jsapi);
+
+                    string noncestr = OperateHelper.GenerateNonceStr();
+                    string timestamp = OperateHelper.Timestamp();
+                    string url = Request.Url.AbsoluteUri.ToString();
+                    string str = string.Format("jsapi_ticket={0}&noncestr={1}&timestamp={2}&url={3}", jsapi, noncestr, timestamp, url);
+                    string sign = OperateHelper.SHA1(str).ToLower();
+                    LogHelper.WriteFile(Server.MapPath("~/Logs/jsapi.txt"), str);
+
+                    WxModel wx = new WxModel()
+                    {
+                        appId = WxConfig.AppId,
+                        nonceStr = noncestr,
+                        timestamp = timestamp,
+                        signature = sign,
+                    };
+                    return View(wx);
+                }
+                return Content("apierr");
             }
             else
             {
