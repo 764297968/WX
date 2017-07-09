@@ -103,6 +103,13 @@ namespace WxToken.Controllers
                             //    result = WXMsgUtil.CreateTextMsg(xmlDoc, "无此消息哦");
                             //}
                             break;
+                        case "VIEW":
+                            result = string.Format(WeiXinXML.Message_News_Main, WeiXinXML.GetFromXML(xmlDoc, "FromUserName"), WeiXinXML.GetFromXML(xmlDoc, "ToUserName"),
+                                  "Image/572386476.jpg",
+                             "http://mp.weixin.qq.com/s/OgqBk9t1mC3cLubwQnvh3w");
+                            LogHelper.WriteFile(Server.MapPath("~/Logs/" + DateTime.Now.ToString("yyyyMMdd") + "view.txt"), "123");
+
+                            break;
                         default:
                             break;
                     }

@@ -1,105 +1,64 @@
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571262</CreateTime>
+<CreateTime>1499611634</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:35:43
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:48:25
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571262</CreateTime>
+<CreateTime>1499611704</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:35:43
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:49:42
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571712</CreateTime>
+<CreateTime>1499611704</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:43:08
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:49:42
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571781</CreateTime>
+<CreateTime>1499611922</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:44:13
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:53:20
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571791</CreateTime>
+<CreateTime>1499611922</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:44:28
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:53:20
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571791</CreateTime>
+<CreateTime>1499611966</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:44:28
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:54:03
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571807</CreateTime>
-<MsgType><![CDATA[text]]></MsgType>
-<Content><![CDATA[11]]></Content>
-<MsgId>6440611869483742328</MsgId>
-</xml> 2017/7/9 星期日 上午 11:44:39
+<CreateTime>1499612266</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></EventKey>
+<MenuId>415060837</MenuId>
+</xml> 2017/7/9 星期日 下午 10:59:03
+<xml><URL><![CDATA[1x687f9296.iok.la]]></URL><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName><FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName><CreateTime>1499612266</CreateTime><MsgType><![CDATA[link]]></MsgType><Title><![CDATA[测试]]></Title><Description><![CDATA[测试]]></Description><Url><![CDATA[http://1x687f9296.iok.la/ScanCode/Index]]></Url><MsgId>12312</MsgId></xml> 2017/7/9 星期日 下午 11:01:07
 <xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
 <FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571811</CreateTime>
+<CreateTime>1499612398</CreateTime>
 <MsgType><![CDATA[event]]></MsgType>
 <Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:44:43
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571943</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:47:00
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571950</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:47:01
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499571963</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:47:14
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499572049</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:48:46
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499572049</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:48:46
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499572282</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:52:39
-<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
-<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
-<CreateTime>1499572282</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
-<Event><![CDATA[CLICK]]></Event>
-<EventKey><![CDATA[V1001_GOOD]]></EventKey>
-</xml> 2017/7/9 星期日 上午 11:52:39
+<EventKey><![CDATA[V1001_TODAY_MUSIC]]></EventKey>
+</xml> 2017/7/9 星期日 下午 11:01:09
