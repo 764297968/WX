@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -70,6 +71,18 @@ namespace WxToken.Controllers
                             result = WeiXinXML.CreateTextMsg(xmlDoc, "你居然取消关注我们了");
                             break;
                         case "CLICK":
+                            string fileUrl = ConfigurationManager.AppSettings["FileUrl"];
+                            result = string.Format(WeiXinXML.Message_News_Main, WeiXinXML.GetFromXML(xmlDoc, "FromUserName"), WeiXinXML.GetFromXML(xmlDoc, "ToUserName"),
+                            DateTime.Now.Ticks,
+                            "1",
+                             string.Format(WeiXinXML.Message_News_Item, "走出大山", "当初的走出大山，才有今天的我，回想往事，记忆犹新。",
+                             fileUrl + "Image/572386476.jpg",
+                             "http://mp.weixin.qq.com/s/OgqBk9t1mC3cLubwQnvh3w")
+                             //+
+                             //string.Format(WeiXinXML.Message_News_Item, "订单管理", "",
+                             //"http://www.soso.com/orderManage.jpg",
+                             //"http://www.soso.com/")
+                             );
                             //DataTable dtMenuMsg = MenuMsgDal.GetMenuMsg(WXMsgUtil.GetFromXML(xmlDoc, "EventKey"));
                             //if (dtMenuMsg.Rows.Count > 0)
                             //{

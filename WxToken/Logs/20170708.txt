@@ -1,0 +1,16 @@
+ 2017/7/8 星期六 下午 7:35:47
+<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
+<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
+<CreateTime>1499513798</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[嗯嗯]]></Content>
+<MsgId>6440362722725861881</MsgId>
+</xml> 2017/7/8 星期六 下午 7:37:48
+<xml><ToUserName><![CDATA[gh_807ce952e271]]></ToUserName>
+<FromUserName><![CDATA[oQSqlxIdxzhOrxtxKI9z-KYGRAec]]></FromUserName>
+<CreateTime>1499513805</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[1]]></EventKey>
+<Ticket><![CDATA[gQGE8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyejFJQTRQMUdlQjQxQ1BnOGhwMUoAAgSzw2BZAwQAjScA]]></Ticket>
+</xml> 2017/7/8 星期六 下午 7:37:56
